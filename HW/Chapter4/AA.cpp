@@ -10,14 +10,14 @@ int main()
         bool fail=false;
         for(int i=0;i<s_size;i++){
             char curr_ch=s[i];
-            while(t_pos<t_size&&t[t_pos]!=curr_ch)
+            while(t_pos<t_size&&t[t_pos]!=curr_ch)// 不匹配就一直前进
                 t_pos++;
             if(t_pos==t_size){
                 cout<<"No"<<endl;
                 fail=true;
                 break;
             }
-            t_pos++;
+            t_pos++; // 当前字符已匹配，从下一个字符开始
         }
         if(!fail){
             cout<<"Yes"<<endl;
